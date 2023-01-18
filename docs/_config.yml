@@ -31,7 +31,7 @@ baseurl: /CanHap501/
 github_username:  VenissaCarolQuadros
 
 # Build settings
-theme: minima
+theme: LeNPaul/jekyll-starter-kit #minima
 plugins:
   - jekyll-feed
 
