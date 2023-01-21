@@ -1,6 +1,4 @@
----
-title: No-Tech Puppeteering
----
+
 ### Introduction
 The task at hand was to make 3 human-actuated human sketches to create motion for visual and haptic feedback. With the aesthetics being of little relevance and building Rube Goldberg machines being simple enough, the emphasis given to the haptic feedback aspect was perhaps the biggest hurdle to overcome in the design process. 
 
