@@ -1,2 +1,4 @@
 theme: jekyll-theme-cayman
 title: CapHaptics 501 Blog
+github:
+is_project_page: false
