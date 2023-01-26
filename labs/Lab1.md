@@ -13,7 +13,7 @@ I didn't want to design something and then realize that I don't have the stuff t
 The movement I set out to create for the 1mm sketch was bobbing. The first most apparent sketch for this was to make a cantilever type setup, which is what I accomplished quite quickly with a popsicle stick secured in place with a bench vise (overkill?). I also added in a piece of wood (with a cat head drawn on it!) secured in place with some wire to emphasize where one could experience the said prodding or nudging.
 
 
-<video width="100%" controls>
+<video height="100%" controls>
   <source src="../assets/images/labs/lab1/1mmSketch1.mp4" type="video/mp4">
 </video>
 
@@ -37,7 +37,7 @@ I had initially intended to make a stand with carton boxes but decided to use th
 Given how convoluted and haphazardly put together this was though, I wasn't quite so surprised when it didn't work on the first try. 
 
 
-<video width="100%" controls>
+<video height="100%" controls>
   <source src="../assets/images/labs/lab1/1mmblooper.mp4" type="video/mp4">
 </video>
 
@@ -48,11 +48,11 @@ The primary issue was the rotating cylindrical wood piece jamming at the corner,
 And finally I had a functional bobbing toy, that was complicated in a true Rube Goldberg fashion.
 
 
-<video width="100%" controls>
+<video height="100%" controls>
   <source src="../assets/images/labs/lab1/1mmfront.mp4" type="video/mp4">
 </video>
 
-<video width="100%" controls>
+<video height="100%" controls>
   <source src="../assets/images/labs/lab1/1mmcloseup.mp4" type="video/mp4">
 </video>
 
@@ -70,7 +70,7 @@ To build the setup, I repurposed the dowel sticks and mounting wood piece from t
 The activation of the setup involved pulling down on the washer which was attached to the top of the dowel. When pulled down sufficiently, the magnet attached to the washer attracted the magnet attached to the honeycomb wrap. On releasing the washer the elastic band relaxed pulling the wrapping paper along with it, resulting in a texture change. 
 
 
-<video width="100%" controls>
+<video height="100%" controls>
   <source src="../assets/images/labs/lab1/10mmvideo.mp4" type="video/mp4">
 </video>
 
@@ -91,7 +91,7 @@ While one option of limiting motion to the required scale was to activate the me
 Since this was my final sketch, I also added in a little bit of aesthetics.
 ![Image of 100mm movement sketch setup](../assets/images/labs/lab1/100mmassembly.jpg)
 
-<video width="100%" controls>
+<video height="100%" controls>
   <source src="../assets/images/labs/lab1/100mmvideo.mp4" type="video/mp4">
 </video>
 
