@@ -13,11 +13,13 @@ I didn't want to design something and then realize that I don't have the stuff t
 The movement I set out to create for the 1mm sketch was bobbing. The first most apparent sketch for this was to make a cantilever type setup, which is what I accomplished quite quickly with a popsicle stick secured in place with a bench vise (overkill?). I also added in a piece of wood (with a cat head drawn on it!) secured in place with some wire to emphasize where one could experience the said prodding or nudging.
 
 
-https://user-images.githubusercontent.com/53469681/214775472-03c04cc5-a252-4d20-8383-d467b2cc72fd.mp4
+<video width="100%" controls>
+  <source src="../assets/images/labs/lab1/1mmSketch1.mp4" type="video/mp4">
+</video>
 
 
 
-Since this was just too easy and not quite that exciting, I proceeded to make a second sketch which was inspired by a mechanical toy.
+But since this was just too easy and not quite that exciting, I proceeded to make a second sketch which was inspired by a mechanical toy.
 
 
 ![Image of mechanical toy](../assets/images/labs/lab1/mechanical_toy.jpg)
@@ -35,7 +37,9 @@ I had initially intended to make a stand with carton boxes but decided to use th
 Given how convoluted and haphazardly put together this was though, I wasn't quite so surprised when it didn't work on the first try. 
 
 
-https://user-images.githubusercontent.com/53469681/214775843-6058cd09-c5dc-434d-9c6d-a9d9c33bb15e.mp4
+<video width="100%" controls>
+  <source src="../assets/images/labs/lab1/1mmblooper.mp4" type="video/mp4">
+</video>
 
 
 
@@ -44,11 +48,13 @@ The primary issue was the rotating cylindrical wood piece jamming at the corner,
 And finally I had a functional bobbing toy, that was complicated in a true Rube Goldberg fashion.
 
 
-https://user-images.githubusercontent.com/53469681/214775894-9e1a3326-e7d9-4fd4-84ad-d752c35a7443.mp4
+<video width="100%" controls>
+  <source src="../assets/images/labs/lab1/1mmfront.mp4" type="video/mp4">
+</video>
 
-
-
-https://user-images.githubusercontent.com/53469681/214775151-e80771c7-82ed-4ebf-bf2c-75336a7920b2.mp4
+<video width="100%" controls>
+  <source src="../assets/images/labs/lab1/1mmcloseup.mp4" type="video/mp4">
+</video>
 
 ##### Reflections...
  Using methods like vibration due to deformation (or even a spring) results in movements that damp over time unlike the rolling mechanism in the second sketch. But given how small and simple the motion is the resulting difference is quite unnoticeable for most of the time period, the implementation method made a great deal of difference in terms of the overall effort even though it resulted in an approximately identical final result. 
@@ -64,7 +70,9 @@ To build the setup, I repurposed the dowel sticks and mounting wood piece from t
 The activation of the setup involved pulling down on the washer which was attached to the top of the dowel. When pulled down sufficiently, the magnet attached to the washer attracted the magnet attached to the honeycomb wrap. On releasing the washer the elastic band relaxed pulling the wrapping paper along with it, resulting in a texture change. 
 
 
-https://user-images.githubusercontent.com/53469681/214776094-8796cb3a-5bd0-414d-a94d-4b3175b6f9ea.mp4
+<video width="100%" controls>
+  <source src="../assets/images/labs/lab1/10mmvideo.mp4" type="video/mp4">
+</video>
 
 
 
@@ -83,7 +91,9 @@ While one option of limiting motion to the required scale was to activate the me
 Since this was my final sketch, I also added in a little bit of aesthetics.
 ![Image of 100mm movement sketch setup](../assets/images/labs/lab1/100mmassembly.jpg)
 
-https://user-images.githubusercontent.com/53469681/214775232-a51522f4-ffc6-49cb-a8ed-024becdb35e9.mp4
+<video width="100%" controls>
+  <source src="../assets/images/labs/lab1/100mmvideo.mp4" type="video/mp4">
+</video>
 
 ##### Reflections... 
 The problems I faced for this setup were completely different in comparison to the previous sketches. If I had instead pulled a spring and released it as I had with the elastic band in the 10mm setup, I wouldn't have encountered the issues of uncontrolled motion at all.  
