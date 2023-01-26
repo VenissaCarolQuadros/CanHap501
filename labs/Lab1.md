@@ -11,25 +11,42 @@ I didn't want to design something and then realize that I don't have the stuff t
 
 #### 1 mm
 The movement I set out to create for the 1mm sketch was bobbing. The first most apparent sketch for this was to make a cantilever type setup, which is what I accomplished quite quickly with a popsicle stick secured in place with a bench vise (overkill?). I also added in a piece of wood (with a cat head drawn on it!) secured in place with some wire to emphasize where one could experience the said prodding or nudging.
-https://user-images.githubusercontent.com/53469681/214774930-1448c181-230e-4282-8064-98fdd892526b.mp4
 
-Since this was just too easy and not quite that exciting, I proceeded to make a second sketch which was inspired by a mechanical toy.  
+
+https://user-images.githubusercontent.com/53469681/214775472-03c04cc5-a252-4d20-8383-d467b2cc72fd.mp4
+
+
+
+Since this was just too easy and not quite that exciting, I proceeded to make a second sketch which was inspired by a mechanical toy.
+
+
 ![Image of mechanical toy](https://github.com/VenissaCarolQuadros/CanHap501/blob/main/assets/images/labs/lab1/mechanical_toy.jpg)
 
-Rather than manually rotating to activate it though, I decided to do so by sliding a weight down a ramp. To build this I used some wooden dowels, a part that seemed like a motor mount, wire, and one piece of wood to served as a mounting, and another cylindrical piece which (very conveniently!) had a slightly off-centred hole. 
+
+Rather than manually rotating to activate it though, I decided to do so by sliding a weight down a ramp. To build this I used some wooden dowels, a part that seemed like a motor mount, wire, and one piece of wood to served as a mounting, and another cylindrical piece which (very conveniently!) had a slightly off-centred hole.
+
 ![Materials for bobbing toy](https://github.com/VenissaCarolQuadros/CanHap501/blob/main/assets/images/labs/lab1/1mmmaterials.jpg)
 
 After securing it all in place with a screw, wire and tape for good measure I was almost there. 
 I had initially intended to make a stand with carton boxes but decided to use the metal step stool we have at the lab instead. This meant an uglier setup but significantly less effort and perhaps a stabler final result. To complete the setup, I fastened a pipe at the top to keep the bobbing dowel in position and a wooden ramp for the weight to roll down and activate the mechanism. 
-![Assembly of bobbing toy](https://github.com/VenissaCarolQuadros/CanHap501/blob/main/assets/images/labs/lab1/1mmassembly.jpg)
+
+![Assembly of bobbing toy](https://github.com/VenissaCarolQuadros/CanHap501/blob/main/assets/images/labs/lab1/1mmassembly.jpeg)
 
 Given how convoluted and haphazardly put together this was though, I wasn't quite so surprised when it didn't work on the first try. 
-https://user-images.githubusercontent.com/53469681/214775090-96718021-e0e2-496d-a7cd-63e9a0ff5b64.mp4
+
+
+https://user-images.githubusercontent.com/53469681/214775843-6058cd09-c5dc-434d-9c6d-a9d9c33bb15e.mp4
+
+
 
 The primary issue was the rotating cylindrical wood piece jamming at the corner, and I managed to resolve it by adding a nut to keep the piece from moving entirely to the side. 
 
 And finally I had a functional bobbing toy, that was complicated in a true Rube Goldberg fashion.
-https://user-images.githubusercontent.com/53469681/214775128-fa13d87b-c7c3-4e11-95bc-e20917440172.mp4
+
+
+https://user-images.githubusercontent.com/53469681/214775894-9e1a3326-e7d9-4fd4-84ad-d752c35a7443.mp4
+
+
 
 https://user-images.githubusercontent.com/53469681/214775151-e80771c7-82ed-4ebf-bf2c-75336a7920b2.mp4
 
@@ -41,10 +58,15 @@ The haptic effect I selected for this case was a texture change. My sketch invol
 ![Image of 10mm movement sketch materials](https://github.com/VenissaCarolQuadros/CanHap501/blob/main/assets/images/labs/lab1/10mmmaterials.jpg)
 
 To build the setup, I repurposed the dowel sticks and mounting wood piece from the 1mm sketch, washers, magnets, an elastic band, push pins and a piece of honeycomb cushioning wrap. 
+
 ![Image of 10mm movement sketch setup](https://github.com/VenissaCarolQuadros/CanHap501/blob/main/assets/images/labs/lab1/10mmassembly.jpg)
 
 The activation of the setup involved pulling down on the washer which was attached to the top of the dowel. When pulled down sufficiently, the magnet attached to the washer attracted the magnet attached to the honeycomb wrap. On releasing the washer the elastic band relaxed pulling the wrapping paper along with it, resulting in a texture change. 
-https://user-images.githubusercontent.com/53469681/214775190-c10514c7-e7b0-4e23-b5e3-5e899f039d98.mp4
+
+
+https://user-images.githubusercontent.com/53469681/214776094-8796cb3a-5bd0-414d-a94d-4b3175b6f9ea.mp4
+
+
 
 ##### Reflections...
 I initially struggled a bit finding things that changed texture when moved (or stretched in this case), but, in hindsight, I probably could have tried out texture changes cause by wetting surfaces. 
@@ -52,7 +74,7 @@ This sketch was admitedly simpler than the 1mm Rube Goldberg setup, however, in 
 
 #### 100 mm
 With the scale of motion required quite drastically increased for this sketch, I decided to use a spring for this sketch.
-![Materials for 100mm movement sketch](https://github.com/VenissaCarolQuadros/CanHap501/blob/main/assets/images/labs/lab1/100mmmaterials.jpg)
+
 
 I quickly realized that unlike the previous sketches my challenge here was not to achieve sufficient movement but rather to restrict it. 
 
