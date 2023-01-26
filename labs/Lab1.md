@@ -32,7 +32,9 @@ Rather than manually rotating to activate it though, I decided to do so by slidi
 After securing it all in place with a screw, wire and tape for good measure I was almost there. 
 I had initially intended to make a stand with carton boxes but decided to use the metal step stool we have at the lab instead. This meant an uglier setup but significantly less effort and perhaps a stabler final result. To complete the setup, I fastened a pipe at the top to keep the bobbing dowel in position and a wooden ramp for the weight to roll down and activate the mechanism. 
 
-![Assembly of bobbing toy](../assets/images/labs/lab1/1mmassembly.jpeg)
+<img src="../assets/images/labs/lab1/1mmassembly.jpeg" width="500" />
+![Assembly of bobbing toy](../assets/images/labs/lab1/1mmassembly.jpeg )
+
 
 Given how convoluted and haphazardly put together this was though, I wasn't quite so surprised when it didn't work on the first try. 
 
