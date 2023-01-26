@@ -20,7 +20,7 @@ https://user-images.githubusercontent.com/53469681/214775472-03c04cc5-a252-4d20-
 Since this was just too easy and not quite that exciting, I proceeded to make a second sketch which was inspired by a mechanical toy.
 
 
-![Image of mechanical toy](https://github.com/VenissaCarolQuadros/CanHap501/blob/main/assets/images/labs/lab1/mechanical_toy.jpg)
+![Image of mechanical toy](assets/images/labs/lab1/mechanical_toy.jpg)
 
 
 Rather than manually rotating to activate it though, I decided to do so by sliding a weight down a ramp. To build this I used some wooden dowels, a part that seemed like a motor mount, wire, and one piece of wood to served as a mounting, and another cylindrical piece which (very conveniently!) had a slightly off-centred hole.
