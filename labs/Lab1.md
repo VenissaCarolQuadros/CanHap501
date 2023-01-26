@@ -81,8 +81,8 @@ I initially struggled a bit finding things that changed texture when moved (or s
 This sketch was admitedly simpler than the 1mm Rube Goldberg setup, however, in this case, I liked that the haptic feedback changed and was observable before and after the activation rather than just during. 
 
 #### 100 mm
-With the scale of motion required quite drastically increased for this sketch, I decided to use a spring for this sketch.
-
+With the scale of motion required quite drastically increased for this sketch, I decided to use a spring for this sketch along with some other readily available meaterials.
+![Materials for 10mm setup](../assets/images/labs/lab1/100mmmaterials.jpg)
 
 I quickly realized that unlike the previous sketches my challenge here was not to achieve sufficient movement but rather to restrict it. 
 
