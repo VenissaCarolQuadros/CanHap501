@@ -8,8 +8,8 @@ The task at hand was to make 3 human-actuated human sketches to create motion fo
 I didn't want to design something and then realize that I don't have the stuff to build it. So, the first thing I needed to accomplish the task of making things move was, well- things!  Since I don't seem to have accumulated stuff I don't need (yet!), I went to the next best option: SRL. However, I quickly learnt that there is no dearth of stuff I could use, and so I moved on to the designing and building.
 
 #### 1 mm
-The movement I set out to create for the 1mm sketch was bobbing. The first most apparent sketch for this was to make a cantilever type setup. I accomplished this quite quickly with a popsicle stick held in place with a bench vise (overkill?). 
-I also added in a piece of wood (with a cat head drawn on it!) and secured it in place with some wire to emphasize where one could experience the said prodding or nudging.
+The movement I set out to create for the 1mm sketch was bobbing. The first most apparent sketch for this was to make a cantilever type setup. I accomplished this quite quickly with a popsicle stick held in place with a bench vise. 
+I also added in a piece of wood (with a cat head drawn on it) and secured it in place with some wire to emphasize where one could experience the said prodding or nudging.
 
 
 <video height="100%" controls>
