@@ -47,7 +47,7 @@ Finally, I added in an end page as well.
 </video>
 
 ### Reflections
-I thoroughly enjoyed this lab, and although it took a fair bit of time (owing mainly to my own over-enthusiasm and bad decisions), I now think I feel much more confident about working with the Haply. If you want to play with Ball-E yourself you can find the code [here](../labs/code/lab2/BallE). It is admittedly in need of a clean up, so I hope using it as is is all you want to do.
+I thoroughly enjoyed this lab, and although it took a fair bit of time (owing mainly to my own over-enthusiasm and bad decisions), I now think I feel much more confident about working with the Haply. If you want to play with Ball-E yourself you can find the code here: [Ball-E Source Code](../labs/code/lab2/BallE). It is admittedly in need of a clean up, so I hope using it as is is all you want to do.
 
 If I could go back and do things differently, I wouldn't underestimate the effort it takes to draw a maze and would do it in a more automated way, rather than doing it manually. I would also read the Fisica library more thoroughly the first time around and save myself a whole lot of grief. 
 
