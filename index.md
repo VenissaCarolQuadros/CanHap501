@@ -2,3 +2,4 @@ There's not much in the way of a description here, but let's leave the touchy-fe
 
 ### Lab Blogs
 - [Lab 1: No Tech Puppeteering](labs/Lab1.md)
+- [Lab 2: Intro to Haply](labs/Lab2.md)
