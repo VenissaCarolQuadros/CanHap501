@@ -47,7 +47,11 @@ Finally, I added an end page as well.
 </video>
 
 ### Reflections
-I thoroughly enjoyed this lab, and although it took a fair bit of time (owing mainly to my own over-enthusiasm and bad decisions), I now feel much more confident about working with the Haply. If you want to play Adventures of Ball-E yourself you can find the code here: [Ball-E Source Code](https://github.com/VenissaCarolQuadros/CanHap501/tree/main/labs/code/lab2/BallE). It is admittedly in need of a clean-up, so I hope using it as is is all you want to do.
+Besides the maze itself, I experienced some problems working with the Haply 2diy device. For instance, higher gains gave a nice 'crisp' feel right against surfaces, but at the same time, they seemed to (possibly?) make it much easier to destabilize the device. I think it somewhat made sense to me from a control perspective, but I couldn't quite find much in the way of documentation for this.
+
+With lower gains, I quite naturally felt little resistance going even through hard surfaces until much after I was through them, but my visual end effector position remained stuck against the wall I'd crossed. I don't believe it took much from the overall experience of my maze, owing mainly to the fact that the objects within the virtual world were still respecting these solid boundaries, but I could see how it would be a show-stopper if it was the end effector being the 'player' and not Ball-E as in my case. 
+
+That being said, I still thoroughly enjoyed this lab, and although it took a fair bit of time (owing mainly to my own over-enthusiasm and bad decisions), I now feel much more confident about working with the Haply. If you want to play Adventures of Ball-E yourself you can find the code here: [Ball-E Source Code](https://github.com/VenissaCarolQuadros/CanHap501/tree/main/labs/code/lab2/BallE). It is admittedly in need of a clean-up, so I hope using it as is is all you want to do.
 
 If I could go back and do things differently, I wouldn't underestimate the effort it takes to draw a maze and would do it in a more automated way, rather than doing it manually. I would also read the Fisica library more thoroughly the first time around and save myself a whole lot of grief. 
 
