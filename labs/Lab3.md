@@ -123,6 +123,7 @@ During the tests, I recorded the expressions they used to describe the haptic ex
 ### What I actually conveyed?
 #### 1. Sticky
 The final expressions I recorded for the 3 users for 'sticky' were: <br>
+
 | User 1               | User 2            | User 3               |
 | --------------------- | ------------------- | ---------------------- |
 | Pulling in, Confining<br> Negative Vibe, Lonely,<br> Breaking through | Viscous, Molasses,<br> Defining Border | Sticky, Resistance,<br>  Stuck (magnetically),<br> Glue trap |
@@ -132,6 +133,7 @@ Sticky seemed to have been conveyed reasonably well with at least one of the exp
 
 #### 2. Trapped
 The user descriptions for 'trapped' were: <br>
+
 | User 1                | User 2             | User 3                |
 | --------------------- | -------------------| ---------------------- |
 | Loosens up now and then,<br> Released and tensed | Bouncy,<br> Stuck in a Bubble | Tilting ball puzzle |
@@ -141,6 +143,7 @@ In the case of 'tilting ball puzzle', the user felt like a combination of moveme
 
 #### 3. Happy
 The user descriptions for 'happy' were: <br>
+
 | User 1               | User 2              | User 3                |
 | ---------------------| ------------------- |---------------------- |
 | Walking, Limping,<br>Reluctant | Mechanical,<br>Pong | Sorting robot,<br>Hand off |
