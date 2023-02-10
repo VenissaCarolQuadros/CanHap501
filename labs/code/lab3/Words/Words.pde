@@ -64,6 +64,7 @@ FBox w4;
 FBox w5;
 
 /* General variables*/
+PFont f;
 int mode=1;
 float x;
 float y;
@@ -79,10 +80,9 @@ float lastChange = Float.NEGATIVE_INFINITY;
 /*Mode 3 variables*/
 float lastMove= Float.NEGATIVE_INFINITY;
 int stepDuration=100; 
-int state = 0;
 int index;
 PVector[] locations = {new PVector(-0.015,0.06),new PVector(-0.011,0.05),new PVector(-0.0067,0.04),new PVector(-0.0034,0.035),new PVector(0.0,0.044),new PVector(0.007,0.06),
-                        new PVector(0.0075,0.08),new PVector(0.005,0.055),new PVector(-0.002,0.042),new PVector(-0.01,0.041),new PVector(-0.014,0.055),new PVector(-0.015,0.067)};
+                        new PVector(0.0075,0.08),new PVector(0.005,0.055),new PVector(-0.002,0.042),new PVector(-0.01,0.041),new PVector(-0.014,0.055),new PVector(-0.015,0.06)};
 
 /* setup section *******************************************************************************************************/
 void setup(){
@@ -124,10 +124,11 @@ void setup(){
   hAPI_Fisica.setScale(pixelsPerCentimeter); 
   world               = new FWorld();
   
+  f                   = createFont("Arial", 16, true);
 
   w1= new FCircle(2);
   w1.setPosition(12.5,5);
-  w1.setFill(0,0,0);
+  w1.setNoFill();
   w1.setNoStroke();
   w1.setSensor(false);
   w1.setStatic(true);
@@ -142,7 +143,7 @@ void setup(){
   FBody[] bodies={w2, w3, w4, w5};
   for (FBody b : bodies)
   {
-    b.setFill(0,0,0);
+    b.setNoFill();
     b.setNoStroke();
     b.setSensor(false);
     b.setStatic(true);
@@ -153,7 +154,7 @@ void setup(){
   /* Setup the Virtual Coupling Contact Rendering Technique */
   s                   = new HVirtualCoupling((1)); 
   s.h_avatar.setDensity(2); 
-  s.h_avatar.setFill(0,0,0); 
+  s.h_avatar.setNoFill(); 
   s.h_avatar.setNoStroke();
   s.init(world, edgeTopLeftX+worldWidth/2, edgeTopLeftY+2); 
   
@@ -184,6 +185,11 @@ void setup(){
 void draw(){
   /* put graphical code here, runs repeatedly at defined framerate in setup, else default at 60fps: */
   background(0);
+  textFont(f, 80);
+  fill(0, 0, 100);
+  textAlign(CENTER);
+  text("Mode: "+Integer.toString(mode), width/2, height/2); 
+  
   world.draw(); 
 }
 /* end draw section ****************************************************************************************************/
@@ -191,13 +197,12 @@ void draw(){
 void keyPressed(){
   if (key=='1'){
     mode=1;
-    print("1");
+    //print("1");
     world.add(w1);
   }
   if (key=='2'){
     mode=2;
-    print("2");
-    print(f_ee, pos_ee);
+    //print("2");
     world.remove(w1);
     w2.setPosition(2,5);
     w3.setPosition(23,5);
@@ -210,8 +215,7 @@ void keyPressed(){
   }
   if (key=='3'){
     mode=3;
-    print("3");
-    print(f_ee, pos_ee);
+    //print("3");
   }
   
 }
@@ -261,9 +265,9 @@ class SimulationThread implements Runnable{
       if (joint)
       {
         dist=Math.abs(x-s.h_avatar.getX())+Math.abs(y-s.h_avatar.getY());
-        if ((1100-200*dist)>0)
+        if ((1000-250*dist)>0)
         {
-          s.h_avatar.setDamping(1100-200*dist);
+          s.h_avatar.setDamping(1000-250*dist);
         }
         else 
         {
@@ -315,23 +319,19 @@ class SimulationThread implements Runnable{
       
       PVector force = new PVector(0, 0);
 
-        // if it has been an entire second, then switch to the next index
         if (millis() - lastMove > stepDuration) 
         {
           
           index++;
-          if (index == locations.length - 1)
+          if (index == locations.length)
             index = 0;
           
           lastMove = millis();
-          state = 1;
         }
-        if (state != 0)
-        { 
+
           PVector xDiff = (pos_ee.copy()).sub(locations[index]);
           force.set(xDiff.mult(-400)); 
           f_ee.set(graphics_to_device(force)); 
-        }
        
     }
     
