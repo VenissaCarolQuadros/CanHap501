@@ -116,7 +116,7 @@ Since this lab required that we used no other feedback mode besides haptics, I t
 
 They could also see the mode they were in printed out in the Processing serial window. I had considered making a better UI with modes and instructions displayed against the black background, but this would have been unnecessary overhead since I was physically present along with the user for all of the tests, and was myself able to deliver the instructions and help them switch modes.
 
-My sketches were tested my 3 users:  one classmate, one individual with limited haptics exposure, and one individual who has taken up this course in the past. As an introduction, I told them that the 3 words didn't necessarily have a genre and they could feel free to describe the physical sensation, how they were feeling, or how they think the device is feeling. Since describing haptic experiences with words can often be hard, I asked them to describe the feeling with phrases if they thought that was easier, and not necessarily limit the number of final descriptions. 
+My sketches were tested by 3 users:  one classmate, one individual with limited haptics exposure, and one individual who has taken up this course in the past. As an introduction, I told them that the 3 words didn't necessarily have a genre and they could feel free to describe the physical sensation, how they were feeling, or how they think the device is feeling. Since describing haptic experiences with words can often be hard, I asked them to describe the feeling with phrases if they thought that was easier, and not necessarily limit the number of final descriptions. 
 
 During the tests, I recorded the expressions they used to describe the haptic experience. It was interesting to note that these experiences and their descriptions would usually change as they spent more time exploring. When they were done exploring the 3 experiences they were shown the recorded descriptions and asked if they wanted to strike out, modify or include any phrases or words based on their final impressions.
 
@@ -161,3 +161,5 @@ You can find the code for this lab here: [Communicate Something Source Code](htt
 </video>
 
 This lab was truly interesting in that it forced me to see the subtleties that could effect the user experience in haptic feedback. It also made me appreciate the advantages and understand the many subtle innaccuracies one can get away with when having multimodal feedback. 
+
+A huge thanks to Jano and my two labmates who graciously agreed to test out my sketch! Your thoughts and feedback were truly valuable and made this lab so much more fun. 
