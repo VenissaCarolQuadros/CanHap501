@@ -123,27 +123,27 @@ During the tests, I recorded the expressions they used to describe the haptic ex
 ### What I actually conveyed?
 #### 1. Sticky
 The final expressions I recorded for the 3 users for 'sticky' were: <br>
-|User 1               | User 2            | User 3               |
-|---------------------|-------------------|----------------------|
-|Pulling in, Confining<br> Negative Vibe, Lonely,<br> Breaking through| Viscous, Molasses,<br> Defining Border| Sticky, Resistance,<br>  Stuck (magnetically),<br> Glue trap|
+| User 1               | User 2            | User 3               |
+| --------------------- | ------------------- | ---------------------- |
+| Pulling in, Confining<br> Negative Vibe, Lonely,<br> Breaking through | Viscous, Molasses,<br> Defining Border | Sticky, Resistance,<br>  Stuck (magnetically),<br> Glue trap |
 
 Sticky seemed to have been conveyed reasonably well with at least one of the expressions from the users seemed to hint at the feeling of stickiness. Even the more emotional expressions like 'negative vibe' and 'lonely' are also quite valid alternate descriptiond, given that there was no genre specified. I thought the expression 'breaking through' was quite interesting given that this was describing the action of breaking away from the stickiness which is something I considered inseparable when conveying 'stuck'. 
 'Defining border' was another unexpected description which the user gave when they felt the static sticky ball at the centre of the workspace. I believe I could have avoided this misleading cue if I had made the sticky ball 'transparent' to the end effector. 
 
 #### 2. Trapped
 The user descriptions for 'trapped' were: <br>
-|User 1               | User 2            | User 3               |
-|---------------------|-------------------|----------------------|
-|Loosens up now and then,<br> Released and tensed| Bouncy,<br> Stuck in a Bubble| Tilting ball puzzle|
+| User 1                | User 2             | User 3                |
+| --------------------- | -------------------| ---------------------- |
+| Loosens up now and then,<br> Released and tensed | Bouncy,<br> Stuck in a Bubble | Tilting ball puzzle |
 
 Although all the users got an impression of the trap effect, the temporal aspect of the trap and release quite vastly varied their interpretations of the experience. 'Stuck in a bubble' was quite a creative and perhaps apt description for this sketch. The user was able to experience getting trapped at different spots on the workspace, and described it as being in a bubble that eventually pops. 'Bouncy' was used to describe the pushing back of the hard walls as the user tried to escape the 'trap'. 
 In the case of 'tilting ball puzzle', the user felt like a combination of movements they made was the reson they were released again as the fact that it was a timed release wasn't obvious in the absence of visual and/or audio feedback. All in all, it seemed like the users got some hint of 'trap' in each case but attributed different reasonings to the releases.
 
 #### 3. Happy
 The user descriptions for 'happy' were: <br>
-|User 1               | User 2            | User 3               |
-|---------------------|-------------------|----------------------|
-|Walking, Limping,<br>Reluctant| Mechanical,<br>Pong| Sorting robot,<br>Hand off|
+| User 1               | User 2              | User 3                |
+| ---------------------| ------------------- |---------------------- |
+| Walking, Limping,<br>Reluctant | Mechanical,<br>Pong | Sorting robot,<br>Hand off |
 
 As should be obvious from the above expressions, the perceived effect was far from my initial intention. There were several things I realized I overlooked in this design. Firstly, I did not account for the variations in force the users would exert on the end effector. My instructions included 'hold it gently' but this still meant a fair bit of variation resulting in a slightly different experience (and path) each time. 
 I also disregarded the impact the jerks and slight unneveness could have on the users' experience. Despite the overall path being somewhat in the shape of a trajectory, the minor deviations and the imperfectness of the path (which was as noted earlier partly on purpose) influenced many of the expressions like 'limping', 'reluctant' and 'mechanical'. Further, since the overall trajectory was short, it felt repetitive quite quickly- the users used expressions like 'walking', 'pong', 'sorting robot' and 'hand off' to describe it. 
