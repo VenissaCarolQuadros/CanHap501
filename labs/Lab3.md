@@ -2,7 +2,7 @@
 title: Communicate Something
 ---
 ### Introduction
-This assignment was quite different from the get go in that in strayed a little from the usual emphasis on multimodal feedback. The requirements were quite straightforward. We were required to create a set of movements to convey 3 words, use two or more different rendering features (static objects, dynamic objects, regions with different dynamics, or a motion guidance), use no other mode of feedback besides physical, link all of these into one sketch, and have someone outside our groups test it. 
+This assignment was quite different from the get go in that it strayed a little from the usual emphasis on multimodal feedback. The requirements were quite straightforward. We were required to create a set of movements to convey 3 words, use two or more different rendering features (static objects, dynamic objects, regions with different dynamics, or a motion guidance), use no other mode of feedback besides physical, link all of these into one sketch, and have someone outside our groups test it. 
 Beyond this, we were given free reign to implement any three words of our choice, and I was fairly excited because it meant we could do our first user test of sorts.
 
 ### What I set out to convey?
