@@ -25,7 +25,7 @@ Also, as I increased the D value to 1.5, I encountered occasional vibrations and
 </video>
 
 #### PID controller
-The tuning of the I value was admittedly the most challenging. When I increased the value of I to 0.01 and then to 0.02 with the previously selected PD values the end effector always reached the final position, however, the movement after the initial burst was fairly slow. The system became unstable as I tried increasing the I value to 0.03. Therefore, I decided to tune the PD values again to make the response faster with 0.02. Since I wanted to make the initial burst larger and reduce the damping I varied the P and D values accordingly. I was able to get a good response with P=0.04, I=0.03 and D=1.15.
+The tuning of the I value was admittedly the most challenging. When I increased the value of I to 0.01 and then to 0.02 with the previously selected PD values the end effector always reached the final position, however, the movement after the initial burst was fairly slow. Also, the system became unstable as I tried setting the I value higher to improve this response. Therefore, I decided to tune the PD values again. Since I wanted to make the initial burst larger and reduce the damping I varied the P and D values accordingly. I was able to get a good response with P=0.04, I=0.03 and D=1.15.
 
 <video height="100%" controls>
   <source src="../assets/images/labs/lab4/PID.mp4" type="video/mp4">
