@@ -8,7 +8,7 @@ This blog outlines my experience with tuning a PID controller for the Haply 2diy
 I thought the starter code was really helpful to get started with the PID tuning. I noticed quickly, however, that the keyboard control of the variables hadn't been set up to reflect in the otherwise awesome UI. Thankfully, the code was well structured and I only needed to make some minor changes to add it in. This made the rest of the tuning and documentation process much easier. 
 
 #### P Controller
-I had already used a P controller for the previous lab. However, unlike my previous experience where I'd handpicked points since the target point was random (and sometimes far away) in this case. Hence, the abrupt bursts of force of the P controller were more apparent. 
+I had already used a P controller for the previous lab. However, unlike my previous experience where I'd handpicked points, the target point was random (and sometimes far away) in this case. Hence, the abrupt bursts of force of the P controller were more apparent.<br/> 
 Even with a value of 0.01, while the graphics seemed to indicate that the end effector could approximately reach the desired point, I noticed that this was not the case for the physical end effector. There was only occasional overshoot in the virtual end effector, but the physical end effector often overshot, especially when the distance between the starting point and target was large. The behaviour was much smoother when I gently held the end effector.
 
 <video height="100%" controls>
@@ -18,7 +18,7 @@ Even with a value of 0.01, while the graphics seemed to indicate that the end ef
 
 #### PD controller
 I noticed that the response of the physical end effector was much smoother as I added in the D value. With the P value still at 0.01, I noticed that the overshoot of the physical end effector was no longer a problem with a D value of around 1.0, but the end effector was no longer reaching the target. I observed that the movement became increasingly damped or 'reluctant' with an increase in the D value. The D parameter seemed to have a similar effect as me holding the end effector. 
-Also, as I increased the D value to 1.5, I encountered occasional vibrations and they increased and became more frequent as the D value was increased further. The [Gain tuning video](https://www.youtube.com/watch?v=uXnDwojRb1g&t=263s) on the Tips and Tricks page turned out to be especially helpful at this stage. After a few trials, I ultimately set P=0.03 and D=1.2 to get a fairly good stable response. 
+Also, as I increased the D value to 1.5, I occasionally encountered  vibrations and they increased and became more frequent as the D value was increased further. The [Gain tuning video](https://www.youtube.com/watch?v=uXnDwojRb1g&t=263s) on the Tips and Tricks page turned out to be especially helpful at this stage. After a few trials, I ultimately set P=0.03 and D=1.2 to get a fairly good stable response. 
 
 <video height="100%" controls>
   <source src="../assets/images/labs/lab4/PD.mp4" type="video/mp4">
@@ -44,7 +44,7 @@ I implemented a circular path for the 'path tracking' exercise with a radius of 
 
 Holding the end effector with my hand seemed to have the expected damping effect even in this case. I was able to reduce the D value and increase the P value to make the end effector follow the path more closely.
 
-Also, I had initially set the radius to 0.4. With this radius, I noticed that the end effector seemed to lag slightly at the top of the circle, near the joint where the arms of the Haply connect to the motors. On further examination, I noticed that owing to the mechanical structure this portion of the Haply seems to be slightly harder to navigate and required more force. Although a little lag at the top of the circle is still noticeable if you were to look for it carefully, when I reduced the radius value to 0.35 I observed that this lag was consequently reduced since the end effector no longer has to move as close to the joint as in the case of the 0.4 radius circle. 
+Also, I had initially set the radius to 0.4. With this radius, I noticed that the end effector seemed to lag slightly at the top of the circle, near the joint where the arms of the Haply connect to the motors. On further examination, I noticed that owing to the mechanical structure this portion of the Haply seems to be slightly harder to navigate and required more force. Although a little lag at the top of the circle is still noticeable if you were to look for it carefully, when I reduced the radius value to 0.35 I observed that this lag was reduced since the end effector no longer has to move as close to the joint as in the case of the 0.4 radius circle. 
 
 #### Varying the loop time
 I initially tried varying the loop time with the path tracking I'd implemented. When I set the loop time to 250μs, I noticed that my computer was able to achieve roughly just over 3.3kHz although I constantly received warnings of speed drops. This meant the loop was actually running with a loop time of 300μs. The end effector had a very smooth motion and was able to reliably follow the path as long as the loop speed didn't have a significant drop suddenly (which was a very rare but observed situation).
