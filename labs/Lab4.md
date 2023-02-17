@@ -17,8 +17,8 @@ Even with a value of 0.01, while the graphics seemed to indicate that the end ef
 
 
 #### PD controller
-I noticed that the response of the physical end effector was much smoother as I added in the D value. With the P value still at 0.01, I noticed that the overshoot of the physical end effector was no longer a problem with a D value of around 1.0, but the end effector was no longer reaching the target. I observed that the movement became increasingly damped or 'reluctant' with an increase in the D value. The D parameter seemed to have a similar effect as me holding the end effector. 
-Also, as I increased the D value to 1.5, I occasionally encountered  vibrations and they increased and became more frequent as the D value was increased further. The [Gain tuning video](https://www.youtube.com/watch?v=uXnDwojRb1g&t=263s) on the Tips and Tricks page turned out to be especially helpful at this stage. After a few trials, I ultimately set P=0.03 and D=1.2 to get a fairly good stable response. 
+I noticed that the response of the physical end effector was much smoother as I added in the D value. With the P value still at 0.01, I noticed that the overshoot of the physical end effector was no longer a problem with a D value of around 1.0, but the end effector was no longer reaching the target. I observed that the movement became increasingly damped or 'reluctant' with an increase in the D value. The D parameter seemed to have a similar effect as me holding the end effector. Also, as I increased the D value to 1.5, I occasionally encountered  vibrations and they increased and became more frequent as the D value was increased further.<br/> 
+The [Gain tuning video](https://www.youtube.com/watch?v=uXnDwojRb1g&t=263s) on the Tips and Tricks page turned out to be especially helpful at this stage. After a few trials, I ultimately set P=0.03 and D=1.2 to get a fairly good stable response. 
 
 <video height="100%" controls>
   <source src="../assets/images/labs/lab4/PD.mp4" type="video/mp4">
@@ -47,7 +47,7 @@ Holding the end effector with my hand seemed to have the expected damping effect
 Also, I had initially set the radius to 0.4. With this radius, I noticed that the end effector seemed to lag slightly at the top of the circle, near the joint where the arms of the Haply connect to the motors. On further examination, I noticed that owing to the mechanical structure this portion of the Haply seems to be slightly harder to navigate and required more force. Although a little lag at the top of the circle is still noticeable if you were to look for it carefully, when I reduced the radius value to 0.35 I observed that this lag was reduced since the end effector no longer has to move as close to the joint as in the case of the 0.4 radius circle. 
 
 #### Varying the loop time
-I initially tried varying the loop time with the path tracking I'd implemented. When I set the loop time to 250μs, I noticed that my computer was able to achieve roughly just over 3.3kHz although I constantly received warnings of speed drops. This meant the loop was actually running with a loop time of ~300μs. The end effector had a very smooth motion and was able to reliably follow the path as long as the loop speed didn't have a significant drop suddenly (which was a very rare but observed situation).
+I tried varying the loop time with the path tracking I'd implemented. When I set the loop time to 250μs, I noticed that my computer was able to achieve roughly just over 3.3kHz although I constantly received warnings of speed drops. This meant the loop was actually running with a loop time of ~300μs. The end effector had a very smooth motion and was able to reliably follow the path as long as the loop speed didn't have a significant drop suddenly (which was a very rare but observed situation).
 I then tried increasing the loop time to values above 500μs. I noticed that the end effector started lagging with each step increase in the loop time parameter and the movement became less smooth. When the loop time was increased to 1500μs the end effector was no longer able to follow the path reliably after some time as the error built up.
 
 <video height="100%" controls>
@@ -55,7 +55,7 @@ I then tried increasing the loop time to values above 500μs. I noticed that the
 </video>
 
 #### Randomizing the loop time
-To randomize the loop time I added two further key events to enable and disable random loop times (keys n and m respectively).
+To randomize the loop time I added two more key events to enable and disable random loop times (keys n and m respectively).
 
     if (random)
         looptime= times[new Random().nextInt(times.length)]*250;
@@ -64,15 +64,15 @@ Here 'times' was,
 
     int[] times= IntStream.rangeClosed(1, 16).toArray();
 
-Hence, when 'random' was true, the looptime was set to a random value within a range of 250 to 4000 (with a step size of 250) at each loop. 
-The randomized loop times made the end effector spin out of control almost immediately. The short intervals when the end effector appears to be stable in the video are owing to me manually stabilizing the end effector only to have it destabilize almost instantly as I released my grip again. Even though I tried a tuning the parameters I wasn't able to get a reasonable path-tracking performance and it became apparent that the occasional loops when the value was set to values at or below 1250μs (for which a reasonably stable path-tracking was previously observed) weren't able to compensate for the instability caused by the larger loop times and the accumulated error. 
+Hence, when 'random' was true, the looptime was set to a random value within a range of 250 to 4000μs (with a step size of 250μs) at each loop. 
+The randomized loop times made the end effector spin out of control almost immediately. The short intervals when the end effector appears to be stable in the video are because I was manually stabilizing the end effector only to have it destabilize almost instantly as I released my grip again. Even though I tried a tuning the parameters I wasn't able to get a reasonable path-tracking performance and it became apparent that the occasional loops when the value was set to values at or below 1250μs (for which a reasonably stable path-tracking was previously observed) weren't able to compensate for the instability caused by the larger loop times and the accumulated error. 
 
 <video height="100%" controls>
   <source src="../assets/images/labs/lab4/random.mp4" type="video/mp4">
 </video>
 
 ### Reflections
-The PID tuning exercise was useful to understand the contribution of the various parameters that make up the PID controller. While I was initially slightly irked about the fact that the tuning didn't seem to have a more straightforward approach than 'trial and error' by the end of the exercise I could understand to a fair extent what needed to be varied to obtain a better response. Further, it was nice to understand and appreciate the effect the user's grip has on the end-effector movement and it also got me thinking about how this could affect the user experience in situations where the grip was suddenly released.
+The PID tuning exercise was useful to understand the contribution of the various parameters that make up the PID controller. While I was initially slightly irked by the fact that the tuning didn't seem to have a more straightforward approach than 'trial and error' by the end of the exercise I could understand to a fair extent what needed to be varied to obtain a better response. Further, it was nice to understand and appreciate the effect the user's grip has on the end-effector movement and it also got me thinking about how this could affect the user experience in situations where the grip was suddenly released.
 
 Besides just the concepts of PID itself, I think this exercise was useful to understand the quirks of the Haply device such as the slight variations in performance over the workspace, and the possible causes of instability and erratic behaviour. Also, although we had come across the importance of the haptic loop and why it was necessary to keep the more computationally intensive visual updates separate in one of the earlier readings I think I only understand the importance of this now. 
 
