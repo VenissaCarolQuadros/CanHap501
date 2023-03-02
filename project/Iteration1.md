@@ -32,7 +32,7 @@ I created a separate Java class for the coloring feature of the canvas as I was 
     canvas.endDraw();
 
 <video height="100%" controls>
-  <source src="../assets/images/labs/lab3/canvas.mp4" type="video/mp4">
+  <source src="../assets/images/project/iteration1/canvas.mp4" type="video/mp4">
 </video>
 
 ### 2. The Colour Picker
@@ -104,7 +104,7 @@ Haptic effects somewhat resembling the feeling when a button is pushed are also 
     }
 
 <video height="100%" controls>
-  <source src="../assets/images/labs/lab3/colourPicker_v01.mp4" type="video/mp4">
+  <source src="../assets/images/project/iteration1/colourPicker_v01.mp4" type="video/mp4">
 </video>
 
 #### V0.2
@@ -139,7 +139,7 @@ I also has to tweak the click haptics described earlier and make it act in the h
 Rather than implement this over the entire UI, for now, I have only roughly implemented this on the down button so as to be able to test and demonstrate the concept. I've set the button colour to gray rather than black in the UI to highlight this change. Everything else mentioned above ([V0.1](#v01)) was retained as is.
 
 <video height="100%" controls>
-  <source src="../assets/images/labs/lab3/colourPicker_v02.mp4" type="video/mp4">
+  <source src="../assets/images/project/iteration1/colourPicker_v02.mp4" type="video/mp4">
 </video>
 
 ### Other features
@@ -150,7 +150,7 @@ The settings button currently leads to a placeholder. This page is intended to c
 The functionality of the disable in the colour picker and the canvas has been demonstrated in the video below. The video also demonstrates how the invisible wall between the two buttons serves as a separation to avoid accidental trigerring.
 
 <video height="100%" controls>
-  <source src="../assets/images/labs/lab3/otherFeatures.mp4" type="video/mp4">
+  <source src="../assets/images/project/iteration1/otherFeatures.mp4" type="video/mp4">
 </video>
 
 ## Summary and Reflections
