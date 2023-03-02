@@ -154,9 +154,11 @@ The functionality of the disable in the colour picker and the canvas has been de
 </video>
 
 ## Summary and Reflections
-I thought this iteration was fairly successful in that we managed to get 3 quite different colour picker concepts out of it. Although I was initially a little worried about how implementing the same thing in different ways would affect the overall progress of the project. However, this approach made it possible to give each other feedback/ suggestions within the team from a third person perspective, explore and brainstorm a lot of different ideas, and has put us in a much better position to receive expert advice on our varied concepts. Besides, we still managed to implement a bare minimum colouring tool which is a fair bit of progress!
+I thought this iteration was fairly successful in that we managed to get 3 quite different colour picker concepts out of it. Although I was initially a little worried about how implementing the same thing in different ways would affect the overall progress of the project. However, this approach made it possible to give each other feedback/ suggestions within the team since we were working on similar aspects and encountering similar problems, explore and brainstorm a lot of different ideas, and has put us in a much better position to receive expert advice on our varied concepts. Besides, we still managed to implement a bare minimum colouring tool which is a fair bit of progress!
 
-For the next iteration, we are hoping to get some expert advice on our concepts and tweak the colour picker design accordingly. Besides just refining the colour picker, there are many other aspects to our project such as trying out the haptic effects on the canvas (such as walls on outlines of a picture) and end effector modifications which I'd be excited to explore.
+I found that the feedback session was especially helpful to rethink design concepts, understand its pros and cons and explore new variations/ modifications. I think if there's one think I'd change it'd be to try to seek feedback within the team and from the mentors and TAs earlier on in the iteration.
+
+For the next iteration, we are hoping to get some expert advice on our concepts and tweak the colour picker design accordingly. Besides just refining the colour picker, there are also many other aspects to our project such as trying out the haptic effects on the canvas (such as walls on outlines of a picture) and end effector modifications which I'd be excited to explore.
 
 ## References
 [1] Begnum, Miriam. (2010). Improving Computer Interaction for People with Parkinson's Disease. \
