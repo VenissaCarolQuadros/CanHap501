@@ -2,7 +2,7 @@
 title: TremCasso- Iteration 1
 ---
 ## Introduction
-Drawing/colouring is generally considered a means of artistic expression or a way to relieve stress. However, for an individual with tremors, having to deal with adapting to physical tools or UIs that are designed with the general population in mind can make it a frustrating process and take away from the joy of something that is otherwise basic and simple. We hope to address the needs of this population of users and make practicing art more fun for them through our project TremCasso- an accessible drawing/colouring tool for people with motor skill impairments caused by hand tremors.
+Drawing/colouring is generally considered a means of artistic expression or a way to relieve stress. However, for an individual with tremors, having to deal with adapting to physical tools or UIs that are designed with the general population in mind can make it a frustrating process and take away from the joy of something that is otherwise basic and simple. We hope to address the needs of this user population and make practicing art more fun for them through our project TremCasso- an accessible drawing/colouring tool for people with motor skill impairments caused by hand tremors.
 
 For the first iteration of this project, my team and I started with a brief literature survey to inform our design choices to suit our target population. We then decided to individually implement different concepts for the Colour Picker required for the drawing tool.
 
