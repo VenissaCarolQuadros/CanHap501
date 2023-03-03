@@ -9,13 +9,13 @@ For the first iteration of this project, my team and I started with a brief lite
 In this blog, I will go a little more into our experience, the literature survey and the reasoning behind my design choices for the Colour Picker and my process of developing it.
 
 ## Takeaways from the Literature Survey 
-Owing to the commercially available adaptive tools like weighted pens for people with tremors my initial impression was that weighing down the hand movement would help to dampen the tremors and make the UI more accessible. However, literature revealed that this isn't necessarily ideal and that the pointer must instead be easy to move and less sensitive to small movements. One study also found that easy-to-reach buttons to reduce fatigue and design to facilitate holding the pointer in position during clicking were other desirable attributes of UI or interfaces for this target population[1]. 
+Owing to the commercially available adaptive tools like weighted pens for people with tremors my initial impression was that weighing down the hand movement would help to dampen the tremors and make the UI more accessible. However, literature revealed that this isn't necessarily ideal and that the pointer must instead be easy to move and less sensitive to small movements. This study also found that easy-to-reach buttons to reduce fatigue and design to facilitate holding the pointer in position during clicking were other desirable attributes of UI or interfaces for this target population[1]. 
 Larger buttons and adequate spacing between them [2], using sliding rather than clicking [3], and introducing a delay in clicks[4] are other design modifications that have been proposed to make the UI more suitable for the target population.
 
 ## Designing the Colour Picker and the overall UI
 The initial version of the UI consists of 2 functional screens,
 1. The Canvas- where the user can draw with the selected colour
-2. The Colour Picker- to select the colour
+2. The Colour Picker- to select the colour\
 and a menu bar at the bottom allowing the user to navigate to the colour picker and settings page.
 
 ### 1. The Canvas
@@ -159,8 +159,8 @@ The functionality of the 'disable' in the colour picker and the canvas has been 
 
 You can find the code for both V0.1 and V0.2 here: [TremCasso Iteration 1](https://github.com/VenissaCarolQuadros/TremCasso/tree/dev_VCQ)
 
-## Summary and Reflections
-I thought this iteration was fairly successful in that we managed to get 3 quite different colour picker concepts out of it. Admittedly, I was initially a little worried about how implementing the same thing in different ways would affect the overall progress of the project. However, ultimately, the approach we took made it possible to give each other feedback/ suggestions within the team since we were working on similar aspects and encountering similar problems, to explore and brainstorm a lot of different ideas, and has put us in a much better position to receive expert advice on our varied concepts. Besides, we still managed to implement a bare minimum colouring tool which is a fair bit of progress!
+## Reflections
+I thought this iteration was fairly successful in that we managed to get 3 quite different colour picker concepts out of it. I was initially a little worried about how implementing the same thing in different ways would affect the overall progress of the project. However, ultimately, the approach we took made it possible to give each other feedback/ suggestions within the team since we were working on similar aspects and encountering similar problems, to explore and brainstorm a lot of different ideas, and has put us in a much better position to receive expert advice on our varied concepts. Besides, we still managed to implement a bare minimum colouring tool which is a fair bit of progress!
 
 For this iteration, we had initially intended to analyze the various resulting designs and to converge our concepts into a final product. However, following our meeting with the mentors, the better plan of action seemed to be to try to refine the individual designs further. I found that the feedback session was especially helpful to rethink not just our course of action but also our design concepts. It helped me understand my design's pros and cons and explore new variations/ modifications. If there's one thing I'd change it'd be to try to seek feedback within the team and from the mentors and TAs more actively and earlier on in the iteration.
 
