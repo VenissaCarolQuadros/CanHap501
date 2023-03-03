@@ -157,6 +157,8 @@ The functionality of the 'disable' in the colour picker and the canvas has been 
   <source src="../assets/images/project/iteration1/otherFeatures.mp4" type="video/mp4">
 </video>
 
+You can find the code for both V0.1 and V0.2 here: [TremCasso Iteration 1](https://github.com/VenissaCarolQuadros/TremCasso/tree/dev_VCQ)
+
 ## Summary and Reflections
 I thought this iteration was fairly successful in that we managed to get 3 quite different colour picker concepts out of it. Admittedly, I was initially a little worried about how implementing the same thing in different ways would affect the overall progress of the project. However, ultimately, the approach we took made it possible to give each other feedback/ suggestions within the team since we were working on similar aspects and encountering similar problems, to explore and brainstorm a lot of different ideas, and has put us in a much better position to receive expert advice on our varied concepts. Besides, we still managed to implement a bare minimum colouring tool which is a fair bit of progress!
 
