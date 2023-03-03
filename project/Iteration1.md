@@ -2,14 +2,14 @@
 title: TremCasso- Iteration 1
 ---
 ## Introduction
-Drawing/colouring is generally considered a means of artistic expression or a way to relieve stress. However, for an individual with tremors, having to deal with adapting to physical tools or UIs that are designed with the general population in mind can make it a frustrating process and take away from the joy of something that is otherwise basic and simple. We hope to address this need and make practicing art more fun through our project TremCasso- an accessible drawing/colouring tool for people with motor skill impairments caused by hand tremors.
+Drawing/colouring is generally considered a means of artistic expression or a way to relieve stress. However, for an individual with tremors, having to deal with adapting to physical tools or UIs that are designed with the general population in mind can make it a frustrating process and take away from the joy of something that is otherwise basic and simple. We hope to address the need of this population of users and make practicing art more fun for them through our project TremCasso- an accessible drawing/colouring tool for people with motor skill impairments caused by hand tremors.
 
 For the first iteration of this project, my team and I started with a brief literature survey to inform our design choices to suit our target population. We then decided to individually implement different concepts for the Colour Picker required for the drawing tool.
 
 In this blog, I will go a little more into our experience, the literature survey and the reasoning behind my design choices for the Colour Picker and my process of developing it.
 
 ## Takeaways from the Literature Survey 
-Owing to the commercially available adaptive tools like weighted pens for people with tremors my initial impression was that weighing down the hand movement would help to dampen the tremors and make the UI more accessible. However, literature revealed that this isn't necessarily ideal and that the pointer must instead be easy to move and less sensitive to small movements. This study also found that easy-to-reach buttons to reduce fatigue and design to facilitate holding the pointer in position during clicking were other desirable attributes of UI or interfaces for this target population[1]. 
+Owing to the commercially available adaptive tools like weighted pens for people with tremors my initial impression was that weighing down the hand movement would help to dampen the tremors and make the UI more accessible. However, literature revealed that this isn't necessarily ideal and that the pointer must instead be easy to move and less sensitive to small movements. This study also found that easy-to-reach buttons to reduce fatigue and design to facilitate holding the pointer in position during clicking were desirable attributes of interfaces for this target population[1]. 
 Larger buttons and adequate spacing between them [2], using sliding rather than clicking [3], and introducing a delay in clicks[4] are other design modifications that have been proposed to make the UI more suitable for the target population.
 
 ## Designing the Colour Picker and the overall UI
@@ -21,7 +21,7 @@ and a menu bar at the bottom allowing the user to navigate to the colour picker 
 ### 1. The Canvas
 ![Canvas](../assets/images/project/iteration1/canvas.jpg)
 
-To simulate the effect of a weighted pen which is a common adaptive instrument used by people with tremors, a damping effect has been applied to the end effector while on the canvas. Although there is some conflicting evidence in literature on whether this is ideal, I left the damping in for this iteration until we come up with a better solution for accommodating tremors while drawing on a blank canvas. 
+A damping effect has been applied to the end effector while on the canvas to simulate the effect of a weighted pen. Although there is some conflicting evidence in literature on whether this is ideal (although weighted pens work to some extent), I left the damping in for this iteration until we come up with a better solution for accommodating tremors while drawing on a blank canvas. 
 
 To build the canvas, I created a separate Java class for the colouring feature of the canvas as I was hoping to make it as modular and reusable as possible. It works by drawing a circle of the specified radius and colour onto the PGraphics object at the position of the end effector. 
 
@@ -43,30 +43,6 @@ To build the canvas, I created a separate Java class for the colouring feature o
 The colour picker consists of a palette of colours, a display of the selected colour, and buttons to manipulate the position of the colour selector.
 
 The colour selector is designed to move in the direction of the button where the end effector rests. These buttons are large to make it easy to position the end effector at the desired target and are closely placed to reduce fatigue caused by large movements. Since there are only four buttons it makes it possible to present a wide variety of colour options within limited space and also to navigate to the desired colour without fine motor control. 
-
-    public int[] up(){
-        if (this.pointer[1]-this.position[1]>0){
-            this.pointer[1]-=25;
-        }
-        else
-          this.pointer[1]=300;
-        return this.pointer;   
-    }
-
-    ...
-    ...
-    ...
-
-    public void draw(PGraphics g) 
-    {
-      g.image(this.palette, this.position[0], this.position[1]);
-      g.noFill();
-      g.square(this.pointer[0],this.pointer[1],25);
-      getColour(g);
-      g.fill(g.red(this.colour), g.green(this.colour), g.blue(this.colour));
-      g.rect(this.position[0]+5, this.position[1]+330, 589, 50, 28);
-      
-    }
 
 The colour selector is designed with a wrap-around feature (for example, it appears on the first column left side if the right direction button is pressed when it is on the last column on the right). Also, to reduce the risk of accidentally triggering neighbouring buttons a damping effect is applied to the area between the buttons. Further, a constant delay is introduced in button triggering when the end effector rests on them to avoid accidental triggering. 
 
@@ -110,11 +86,11 @@ A haptic effect somewhat resembling the feeling when a button is pushed has been
 </video>
 
 #### V0.2
-During our feedback session with the mentors and TAs, it became apparent that one of the major disadvantages of my design concept is the long time it takes to navigate from one colour to another. Even considering that the delay would be eventually configurable to the desired level if had to still be retained at a high enough level to avoid accidental triggering, it meant a significant wait time to get to the desired colour if the colours were far apart.
+During our meeting with the mentors and TAs, it became apparent that one of the major disadvantages of my design concept is the long time it takes to navigate from one colour to another. Even considering that the delay would be eventually configurable to the desired level if had to still be retained at a high enough level to avoid accidental triggering, it meant a significant wait time to get to the desired colour if the colours were far apart.
 
 To try to alleviate this, I decided to try out a slightly nuanced implementation of the first version based on some of the feedback and ideas that came up during the meeting with the mentors and TAs. One of the ideas that was discussed during the meeting was to make it harder to enter or trigger something and thereby ensure that triggering was intentional.
 
-Playing on this idea, I implemented the button with a gradient of delay- i.e. the delay would depend on the position of the end effector on the large button. A force gradient was also applied on the button so that intentionally pushing further in with greater force causes the colour selector to move faster. The gradient that has been implemented in this prototype has three discrete levels and can be illustrated for the 'down' button as shown below.
+Playing on this idea, I implemented the button with a gradient of delay- i.e. the delay would depend on the position of the end effector on the large button. A force gradient was also applied on the button so that intentionally pushing further into the button with greater force causes the colour selector to move faster. The gradient that has been implemented in this prototype has three discrete levels and can be illustrated for the 'down' button as shown below.
 
 ![Button force and delay gradient](../assets/images/project/iteration1/buttonGradient.jpg)
 
@@ -140,7 +116,7 @@ For this version, I removed the damping effect of the area between the buttons a
 
 Given the limited time between the feedback session and the deadline, for now, I have only implemented this on the down button (rather than the entire UI) to be able to test and demonstrate the concept. I've set the button colour to gray to highlight this change. 
 
-Everything else mentioned above ([V0.1](#v01)) was retained as is.
+Everything else mentioned in the section above ([V0.1](#v01)) was retained as is.
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration1/colourPicker_v02.mp4" type="video/mp4">
@@ -151,7 +127,7 @@ The Spacebar is configured as a disable/enable toggle key throughout the UI- dis
 
 The settings button currently leads to a placeholder. This page is intended to contain application settings like click delay, damping etc. and was only placed in this iteration to demonstrate how an invisible wall separating the 2 buttons (settings and palette) could help to avoid accidentally triggering the wrong button.
 
-The functionality of the 'disable' in the colour picker and the canvas has been demonstrated in the video below. The video also demonstrates how the invisible wall between the two buttons serves as a separation to avoid accidental triggering and presents the overall V0.1 UI. 
+The functionality of the 'disable' in the colour picker and the canvas has been demonstrated in the video below. The video also shows how the invisible wall between the two buttons serves as a separation to avoid accidental triggering and presents the overall V0.1 UI. 
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration1/otherFeatures.mp4" type="video/mp4">
