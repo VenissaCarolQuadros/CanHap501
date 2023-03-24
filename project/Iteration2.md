@@ -15,9 +15,9 @@ Since Yaman's concept from iteration 1 allowed for a fair bit of customization a
 
 ![Base concept as in iteration 1](../assets/images/project/iteration2/It1_concept.png)
 
-We started by brainstorming what variables would be best to make customizable for the target population. This was based on some brief research we made on commercially available aids for people with tremors. These generally included a combination of variations of weighted pens or utensils to weigh down/ limit the effect of tremors, larger buttons or targets, and a reduction in the range of motion required (This was primarily in the case of Parkinsonian tremors, since the condition also causes rigidity). The former could be addressed with force feedback and damping while the latter slightly contradicting requirements relied more on UI design.
+We started by brainstorming what variables would be best to make customizable for the target population. This was based on some brief research we made on commercially available aids for people with tremors. These generally included a combination of variations of weighted pens or utensils to weigh down/ limit the effect of tremors, larger buttons or targets, and a reduction in the range of motion required (This was primarily in the case of Parkinsonian tremors, since the condition also causes rigidity). The former could be addressed with force feedback and damping while the latter (slightly contradicting) requirements rely more on UI design.
 
-The various aspects we considered for customizability included the orientation of the colour picker, size of the colour picker screen, number of rows and swatches per row, number of stages in the colour picker, and the force feedback of the buttons in the application. We tried to pare down which variables to focus on based on what would be most valuable for the target population.  We decided to not focus on orientation as one of the points that came up during our meeting with Prof. Archambault was that while tremors could occasionally be directional there were also some ergonomic considerations here. We also chose to make the colour picker span the full page size while still allowing for some customizability of the colour picker size. 
+Wth this basis, the various aspects we considered for customizability included the orientation of the colour picker, size of the colour picker screen, number of rows and swatches per row, number of stages in the colour picker, and the force feedback of the buttons in the application. We tried to pare down which variables to focus on based on what would be most valuable for the target population.  We decided to not focus on orientation as one of the points that came up during our meeting with Prof. Archambault was that while tremors could occasionally be directional there were also some ergonomic considerations here. We also chose to make the colour picker span the full page size while still allowing for some customizability of the colour picker size. 
 
 In order to make more colours available even with the limited number of swatches, each swatch was made into a gradient of colours (instead of a single colour) thus making it possible to select the desired colour by going through multiple stages. Further, we included pagination in our application making it possible to switch between the canvas (where the user can draw) and the colour picker and also navigate to stages in the colour picker. 
 
@@ -25,7 +25,7 @@ Antoine and Yaman worked majorly on the colour picker, while I worked on the pag
 
 ## Development for Iteration 2
 ### Pagination
-I had already implemented pagination for my concept in the previous iteration and so while I had a rough idea of where to start, the implementation in this iteration came with a different set of challenges. This code base was completely different and so I started by restructuring and organizing the code base so that everyone could continue working without necessarily breaking or having too much trouble because of the multiple pages.  
+Since I had already implemented pagination for my concept in the previous iteration , I had a rough idea of where to start. However, the implementation in this iteration came with a different set of challenges. This code base was completely different and so I started by restructuring and organizing the code base so that everyone could continue working without necessarily breaking or having too much trouble because of the multiple pages.  
 
 Since my implementation of pagination works by hiding the bodies that weren't needed for a page, this also required that I knew which bodies had to be hidden. Given that the only objects that needed to be retained throughout the application were the side button and its other components I implemented this by setting a tag to these elements and hiding and or showing the rest as needed.
 
@@ -90,14 +90,14 @@ The boundary position was adjusted to be far enough to avoid accidental cyclic m
 
 In the case of the previous and next buttons within the colour picker, while they were initially implemented separately (at the top and bottom of the page) following further discussions these buttons were also combined to form a single button at the bottom of the screen. A similar logic was used to implement this.
 
-Even with the boundary, there was still the possibility of a user from the target population moving sufficiently out of the button and triggering it repeatedly resulting in cycling between the pages. To alleviate this concern and to make the interface seem more interactive haptic effects were introduced into the buttons.
-
 <video height="100%" controls>
   <source src="../assets/images/project/iteration2/button_logic.mp4" type="video/mp4">
 </video>
 
-### Haptics for buttons
-The feedback force for the buttons was implemented in the form of a gradient, that is, the force progressively increased as the user moved further into the button similar to the effect of pressing a spring. The function that implements this can be found in the Buttons java class.
+Even with the boundary logic in place, there was still the possibility of a user from the target population unintentionally moving sufficiently out of the button and back in thereby triggering it repeatedly and causing cycling between the pages. To alleviate this concern and to make the interface seem more interactive haptic effects were implemented on the buttons.
+
+### Haptics for Buttons
+The force feedback for the buttons was implemented in the form of a gradient, that is, the force progressively increased as the user moved further into the button similar to the effect of pressing a spring. The function that implements this can be found in the Buttons java class.
 
     public PVector applyForces(float forceMin, float forceMax, float pos, PVector fEE){
         if (pos>= buttonMin && pos <= buttonMax){
@@ -111,7 +111,7 @@ The feedback force for the buttons was implemented in the form of a gradient, th
         return fEE;
     }
 
-While the implementation of the forces themselves was fairly straightforward it took much longer to tweak the positions and the force values so that the effect felt as desired. The challenges in tuning the position and the force values were further exacerbated by Haply's varied behaviour over its workspace (especially at the borders of the workspace).
+While the implementation of the forces themselves was fairly straightforward it took much longer to tweak the positions and the force values so that the effect felt as desired. The challenges in tuning the position and the force values were further exacerbated by Haply's varied behaviour over its workspace.
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration2/pagination.mp4" type="video/mp4">
@@ -120,33 +120,31 @@ While the implementation of the forces themselves was fairly straightforward it 
 ### Visual and haptic feedback coordination
 During our meeting with the mentors and TAs, the lack of coordination between the application behaviour, the visual features and the haptics became glaringly apparent. Admittedly, I was still only focusing on getting the functionality right and had not sufficiently focused on the visuals, however, there were aspects I would have overlooked if not for the points raised during this meeting. 
 
-Besides making the buttons appear to span the whole length of the screen (which hadn't been done yet, as can be observed in the video in the previous section) to make this affordance clearer, I also worked on changing the icons of the buttons since this didn't seem to be as obvious as expected. Also, since the way to trigger a button in our application (which is by touching or hovering over the button) isn't quite conventional, and the lack of haptics involved when the trigger happens, it made it necessary to use visual reinforcement to convey this. One more point that was brought up was to achieve coordination between the visual and haptic modalities since the gradient force was already present.
+Besides making the buttons appear to span the whole length of the screen (which hadn't been done yet, as can be observed in the video in the previous section) to make this affordance clearer, I also worked on changing the icons of the buttons since this didn't seem to be as obvious as expected. Also, since the way to trigger a button in our application (which is by touching or hovering over the button) isn't quite conventional it made it necessary to more explicitly convey this. One more point that was brought up was to achieve coordination between the visual and haptic modalities.
 
 To address the latter two concerns the button visual feedback was modified to appear like it was a button being pushed into the wall, which made it give the illusion of an actual push button. This was done by modifying the position of the button to move when the end effector was in contact with it. 
 
-Finally, I also changed the button icons to be more clear, but the design is still pretty bland. Antoine was working on the button visuals to give them polished, cool look to the button, which should make its way in in the next iteration!
+Finally, I also changed the button icons to be more clear, but the design is still admittedly pretty bland. (Antoine was working on the button visuals to give them polished, cool look. This should make its way in in the next iteration!)
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration2/button_logic_new.mp4" type="video/mp4">
 </video>
 
 ### Further modifications
-After making all the above-mentioned changes, during one of our discussions, the topic of only triggering the button when it is fully pushed came up. This made sense to me since even with physical buttons the triggering usually happens only when the button is pushed all the way. Further, by implementing this, while it made the button only a slight bit harder to trigger (that is, the user would need to push the end effector to the end of the workspace to trigger the button) it also helped to reduce accidental triggers. Further, since pushing to edges is generally considered easy (according to Fitts' law) the added difficulty might not even be as significant and perhaps the user would have pushed to the edge for convenience even if the triggering was set midway. And so, I implemented this on both buttons.
+After making all the above-mentioned changes, during one of our discussions, the topic of only triggering the button when it is fully pushed came up. This made sense to me since even with physical buttons the triggering usually happens only when the button is pushed all the way. Further, by implementing this, while it made the button only a slight bit harder to trigger (that is, the user would need to push the end effector to the end of the workspace to trigger the button) it also helped to reduce accidental triggers. Further, since pushing to edges is generally considered easy (according to Fitts' law) the added difficulty might not even be as significant and perhaps the user would have pushed to the edge for convenience, even if the triggering was set midway. And so, I implemented this on both buttons.
 
-We also had a long back-and-forth on the best layout for the previous/next buttons. We finally settled on making the button the width of the colour picker. The wall of the button  
+We also had a long back-and-forth on the best layout for the previous/next buttons. We finally settled on making the button the width of the colour picker. The wall of the colour picker was extended all the way down to the button to form a corner (Fitts' law again!) and make it possible for the user to easily trigger the button. 
 
 One more thing we wanted to try out was making the haptic effect of a click when the button was triggered. I initially thought this would be easy since I had implemented a similar effect for my buttons in the previous iterations. However, (like most things seem to go,) this didn't turn out to be as straightforward as I'd hoped. 
 I tried two variations for this:
 1. The force gradient implemented earlier was modified so that the force dropped to a lower static value beyond the 'trigger point' so that the drop in force felt like a click.
 The challenge with this model was that when the force was set low enough to feel the 'click' effect the end effector occasionally got stuck within the button and did not retain its push-back effect. 
 2. The force gradient was kept as is with a small added perpendicular force when the click occurs. While the click is actually in the wrong direction in this case, this isn't necessarily apparent because the resulting movement is small.
-While I had success with a similar implementation in the previous iteration I was not able to get a satisfactory effect despite much tweaking. Both these variations can be found [here](https://github.com/VenissaCarolQuadros/TremCasso/blob/it2_VCQ/iteration2/TremCasso_paginated/Buttons.java)
+While I had success with a similar implementation in the previous iteration I was not able to get a satisfactory effect despite much tweaking. The implementation of both these variations can be found [here](https://github.com/VenissaCarolQuadros/TremCasso/blob/it2_VCQ/iteration2/TremCasso_paginated/Buttons.java)
 
-Finally, Antoine modified the force gradient with a variation of the logic in 1. and after some tweaking that gave a better feel. The effect is fairly subtle and there are still rare occasions when the problem of the end effector getting stuck occurs but the effect is now otherwise smooth. 
+Finally, Antoine modified the force gradient with a variation of the logic in 1. and after some tweaking that gave a better feel. Although the effect is fairly subtle and there are still rare occasions when the problem of the end effector getting stuck occurs, the effect is now otherwise smooth. 
 
-One of the reasons I believe the renderings didn't quite work as expected is because of Haply's limitations in rendering force reliable at the far corners of the workspace. More on that in the next section...
-
-But before we go there, do catch a glimpse of what the final implementation at this stage looks like:
+This is how the final implementation at the wnd of this iteration looks like:
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration2/final.mp4" type="video/mp4">
@@ -155,7 +153,7 @@ But before we go there, do catch a glimpse of what the final implementation at t
 ### Challenges and Haply quirks
 In this iteration, since we were simultaneously working on the same code it took an extra bit of effort to ensure that we weren't sabotaging each other's work and also to make sure everyone was in the know about any changes we made so that they could continue to work comfortably. This slowed the progress down a bit initially but once got the hang of it, it didn't seem much of a hassle anymore. On the contrary, it often gave the added advantage of instant feedback/ alternate suggestions on implementing something. 
 
-One Haply quirk that bothered me a bit during this iteration was the unevenness of the force rendered at different parts of the workspace. While I had noted this while doing the PID lab, this time there wasn't the possibility of simply shifting the rendering into a favourable part of the workspace and losing the entire top portion. The force rendering on the other edges (while sometimes not the best) still worked better than the top portion close to the motors. By modifying the layout of our application so that we wouldn't need to be rendering any forces at the top we were able to evade most of the complications this caused.
+One Haply quirk that bothered me a bit during this iteration was the unevenness of the force rendered at different parts of the workspace. This is one of the reasons I believe the 'click' force feedback, which is to be rendered at the far corners of the workspace, didn't quite work as expected. While I had noted this while doing the PID lab, this time there wasn't the possibility of simply shifting the rendering into a favourable part of the workspace and losing the entire top portion. The force rendering on the other edges (while sometimes not the best) still worked better than the top portion close to the motors. By modifying the layout of our application so that we wouldn't need to be rendering any forces at the top we were able to evade most of the complications this caused. 
 
 You can find the code for this iteration here: [TremCasso Iteration 2](https://github.com/VenissaCarolQuadros/TremCasso/tree/main/iteration2/TremCasso_paginated)
 
@@ -164,4 +162,4 @@ Working on the same prototype simultaneously came with its own set of problems, 
 
 One major learning for me personally was the importance of multiple modalities complimenting or reinforcing each other and also thinking of functionality and experience together. Despite having read about this ad nauseam, heading into the haptics implementation for this iteration I thought of it as a 'functionality' with its sole purpose being to avoid false triggering. I hadn't thought about tying the haptic effects with the interaction experience as much as I should have. This iteration, however, helped me understand how functionality and experience can be tied together. Safe to say, I like the final result a lot more than the one from before.
 
-While there was quite a bit of development in this iteration there are still a couple of things such as introducing features like delay, improving the visual design etc. that could help further improve the design. For the last iteration, we are planning on possibly including more customization, working to improve the haptics and allowing the user to modify the settings within the application.
+While there was quite a bit of development in this iteration there are still a couple of things such as introducing features like delay, improving the visual design etc. that could help further improve the application. For the last iteration, we are planning on possibly including more customization, working to improve the haptics and allowing the user to modify the settings within the application.
