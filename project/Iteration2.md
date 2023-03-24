@@ -111,7 +111,7 @@ The force feedback for the buttons was implemented in the form of a gradient, th
         return fEE;
     }
 
-While the implementation of the forces themselves was fairly straightforward it took much longer to tweak the positions and the force values so that the effect felt as desired. The challenges in tuning the position and the force values were further exacerbated by Haply's varied behaviour over its workspace.
+While the implementation of the forces themselves was fairly straightforward it took much longer to tweak the positions and the force values so that the effect felt as desired. The challenges involved in tuning the position and the force values were further exacerbated by Haply's varied behaviour over its workspace.
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration2/pagination.mp4" type="video/mp4">
