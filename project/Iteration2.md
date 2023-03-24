@@ -58,7 +58,7 @@ Since Yaman and Antoine were implementing the colour picker page, I then moved o
 During our design discussions for the buttons, we concluded that buttons should ideally be aligned to and span the entire wall so that the user does not have trouble reaching the target. Also, a single button was to serve as both the entrance to and exit from the colour picker. This would make the UI cleaner and limit the number of buttons present at any instant. Accordingly, I implemented a button along the right wall to allow the user to enter the colour picker from the canvas and then exit back into the canvas after selecting the colour. 
 
 To allow for reliable triggering and make the visual state of the button reflect what action it caused, I placed a boundary a little to the left of the button. The flow for this works as follows:
-1. The user touches the button with the end effector to trigger the button and page changes. Resting on the button or moving very slightly in and out of the button (which could be caused by tremors) does not result in cycling between pages. This is indicated by the button image remaining the same before and after the triggering.
+1. The user touches the button with the end effector to trigger the button and the page changes. Resting on the button or moving very slightly in and out of the button (which could be caused by tremors) does not result in cycling between pages. This is indicated by the button image remaining the same before and after the triggering.
 2. When the page has changed and the user moves into the new page (crossing the boundary mentioned earlier), the visual of the button changes indicating the button can now be triggered to move out of the page.
 
 
@@ -145,7 +145,7 @@ While I had success with a similar implementation in the previous iteration I wa
 
 Finally, Antoine modified the force gradient with a variation of the logic in 1. and after some tweaking that gave a better feel. Although the effect is fairly subtle and there are still rare occasions when the problem of the end effector getting stuck occurs, the effect is now otherwise smooth. 
 
-This is how the final implementation at the wnd of this iteration looks like:
+This is how the final implementation at the end of this iteration looks like:
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration2/final.mp4" type="video/mp4">
