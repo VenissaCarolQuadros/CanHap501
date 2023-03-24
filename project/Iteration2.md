@@ -140,6 +140,7 @@ I tried two variations for this:
 1. The force gradient implemented earlier was modified so that the force dropped to a lower static value beyond the 'trigger point' so that the drop in force felt like a click.
 The challenge with this model was that when the force was set low enough to feel the 'click' effect the end effector occasionally got stuck within the button and did not retain its push-back effect. 
 2. The force gradient was kept as is with a small added perpendicular force when the click occurs. While the click is actually in the wrong direction in this case, this isn't necessarily apparent because the resulting movement is small.
+
 While I had success with a similar implementation in the previous iteration I was not able to get a satisfactory effect despite much tweaking. The implementation of both these variations can be found [here](https://github.com/VenissaCarolQuadros/TremCasso/blob/it2_VCQ/iteration2/TremCasso_paginated/Buttons.java)
 
 Finally, Antoine modified the force gradient with a variation of the logic in 1. and after some tweaking that gave a better feel. Although the effect is fairly subtle and there are still rare occasions when the problem of the end effector getting stuck occurs, the effect is now otherwise smooth. 
