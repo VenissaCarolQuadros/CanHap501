@@ -97,7 +97,7 @@ In the case of the previous and next buttons within the colour picker, while the
 Even with the boundary logic in place, there was still the possibility of a user from the target population unintentionally moving sufficiently out of the button and back in thereby triggering it repeatedly and causing cycling between the pages. To alleviate this concern and to make the interface seem more interactive haptic effects were implemented on the buttons.
 
 ### Haptics for Buttons
-The force feedback for the buttons was implemented in the form of a gradient, that is, the force progressively increased as the user moved further into the button similar to the effect of pressing a spring. The function that implements this can be found in the Buttons java class.
+The force feedback for the buttons was implemented in the form of a gradient, that is, the force progressively increased as the user moved further into the button similar to the effect of pressing a spring. The function that implements this can be found in the Buttons Java class.
 
     public PVector applyForces(float forceMin, float forceMax, float pos, PVector fEE){
         if (pos>= buttonMin && pos <= buttonMax){
@@ -141,7 +141,7 @@ I tried two variations for this:
 The challenge with this model was that when the force was set low enough to feel the 'click' effect the end effector occasionally got stuck within the button and did not retain its push-back effect. 
 2. The force gradient was kept as is with a small added perpendicular force when the click occurs. While the click is actually in the wrong direction in this case, this isn't necessarily apparent because the resulting movement is small.
 
-While I had success with a similar implementation in the previous iteration I was not able to get a satisfactory effect despite much tweaking. The implementation of both these variations can be found [here](https://github.com/VenissaCarolQuadros/TremCasso/blob/it2_VCQ/iteration2/TremCasso_paginated/Buttons.java)
+While I had success with a similar implementation in the previous iteration I was not able to get a satisfactory effect despite much tweaking. The implementation of both these variations can be found [here](https://github.com/VenissaCarolQuadros/TremCasso/blob/it2_VCQ/iteration2/TremCasso_paginated/Buttons.java).
 
 Finally, Antoine modified the force gradient with a variation of the logic in 1. and after some tweaking that gave a better feel. Although the effect is fairly subtle and there are still rare occasions when the problem of the end effector getting stuck occurs, the effect is now otherwise smooth. 
 
@@ -156,7 +156,7 @@ In this iteration, since we were simultaneously working on the same code it took
 
 One Haply quirk that bothered me a bit during this iteration was the unevenness of the force rendered at different parts of the workspace. This is one of the reasons I believe the 'click' force feedback, which is to be rendered at the far corners of the workspace, didn't quite work as expected. While I had noted this while doing the PID lab, this time there wasn't the possibility of simply shifting the rendering into a favourable part of the workspace and losing the entire top portion. The force rendering on the other edges (while sometimes not the best) still worked better than the top portion close to the motors. By modifying the layout of our application so that we wouldn't need to be rendering any forces at the top we were able to evade most of the complications this caused. 
 
-You can find the code for this iteration here: [TremCasso Iteration 2](https://github.com/VenissaCarolQuadros/TremCasso/tree/main/iteration2/TremCasso_paginated)
+You can find the code for this iteration here: [TremCasso Iteration 2](https://github.com/VenissaCarolQuadros/TremCasso/tree/main/iteration2/TremCasso_paginated).
 
 ## Reflections
 Working on the same prototype simultaneously came with its own set of problems, however, it had many advantages. Since we were all working on the same application, bugs were caught fairly quickly, and there was a lot more design planning and discussion. While this meant multiple minor iterations and repeated modifications, it also helped us to catch logic flaws or oversights early on and find solutions to them.
