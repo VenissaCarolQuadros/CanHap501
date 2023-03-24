@@ -115,8 +115,8 @@ While the implementation of the forces themselves was fairly straightforward it 
   <source src="../assets/images/project/iteration2/pagination.mp4" type="video/mp4">
 </video>
 
-### Visual feedback coordination
-During our meeting with the mentors and TAs, the lack of visual feedback coordination between the application behaviour and the haptics became glaringly apparent. Admittedly, I was still only focusing on getting the functionality right and had not sufficiently focused on the visuals, however, there were aspects I would have overlooked if not for the points raised during this meeting. 
+### Visual and haptic feedback coordination
+During our meeting with the mentors and TAs, the lack of coordination between the application behaviour, the visual features and the haptics became glaringly apparent. Admittedly, I was still only focusing on getting the functionality right and had not sufficiently focused on the visuals, however, there were aspects I would have overlooked if not for the points raised during this meeting. 
 
 Besides making the buttons appear to span the whole length of the screen (which hadn't been done yet, as can be observed in the video in the previous section) to make this affordance clearer, I also worked on changing the icons of the buttons since this didn't seem to be as obvious as expected. Also, since the way to trigger a button in our application (which is by touching or hovering over the button) isn't quite conventional, and the lack of haptics involved when the trigger happens, it made it necessary to use visual reinforcement to convey this. One more point that was brought up was to achieve coordination between the visual and haptic modalities since the gradient force was already present.
 
