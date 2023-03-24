@@ -15,7 +15,7 @@ Since Yaman's concept from iteration 1 allowed for a fair bit of customization a
 
 ![Base concept as in iteration 1](../assets/images/project/iteration2/It1_concept.png)
 
-We started by brainstorming what variables would be best to make customizable for the target population. This was based on some brief research we made on commercially available aids for people with tremors. These generally included a combination of variations of weighted pens or utensils to weigh down/ limit the effect of tremors, larger buttons or targets, and a reduction in the range of motion required (This was primarily in the case of Parkinsonian tremors, since the condition also causes rigidity). The former could be addressed with force feedback and damping while the latter (slightly contradicting) requirements rely more on UI design.
+We started by brainstorming what variables would be best to make customizable for the target population. This was based on some brief research we made on commercially available aids for people with tremors. These generally included a combination of variations of weighted pens or utensils to weigh down/ limit the effect of tremors, larger buttons or targets, and a reduction in the range of motion required (This was primarily in the case of Parkinsonian tremors since the condition also causes rigidity). The former could be addressed with force feedback and damping while the latter (slightly contradicting) requirements rely more on UI design.
 
 With this basis, the various aspects we considered for customizability included the orientation of the colour picker, size of the colour picker screen, number of rows and swatches per row, number of stages in the colour picker, and the force feedback of the buttons in the application. We tried to pare down which variables to focus on based on what would be most valuable for the target population.  We decided to not focus on orientation as one of the points that came up during our meeting with Prof. Archambault was that while tremors could occasionally be directional there were also some ergonomic considerations here. We also chose to make the colour picker span the full page size while still allowing for some customizability of the colour picker size. 
 
@@ -25,7 +25,7 @@ Antoine and Yaman worked majorly on the colour picker, while I worked on the pag
 
 ## Development for Iteration 2
 ### Pagination
-Since I had already implemented pagination for my concept in the previous iteration , I had a rough idea of where to start. However, the implementation in this iteration came with a different set of challenges. This code base was completely different and so I started by restructuring and organizing the code base so that everyone could continue working without necessarily breaking or having too much trouble because of the multiple pages.  
+Since I had already implemented pagination for my concept in the previous iteration, I had a rough idea of where to start. However, the implementation in this iteration came with a different set of challenges. This code base was completely different and so I started by restructuring and organizing the code base so that everyone could continue working without necessarily breaking or having too much trouble because of the multiple pages.  
 
 Since my implementation of pagination works by hiding the bodies that weren't needed for a page, this also required that I knew which bodies had to be hidden. Given that the only objects that needed to be retained throughout the application were the side button and its other components I implemented this by setting a tag to these elements and hiding and or showing the rest as needed.
 
@@ -124,7 +124,7 @@ Besides making the buttons appear to span the whole length of the screen (which 
 
 To address the latter two concerns the button visual feedback was modified to appear like it was a button being pushed into the wall, which made it give the illusion of an actual push button. This was done by modifying the position of the button to move when the end effector was in contact with it. 
 
-Finally, I also changed the button icons to be more clear, but the design is still admittedly pretty bland. (Antoine was working on the button visuals to give them polished, cool look. This should make its way in in the next iteration!)
+Finally, I also changed the button icons to be more clear, but the design is still admittedly pretty bland. (Antoine was working on the button visuals to give them a polished, cool look. This should make its way in in the next iteration!)
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration2/button_logic_new.mp4" type="video/mp4">
@@ -145,7 +145,7 @@ While I had success with a similar implementation in the previous iteration I wa
 
 Finally, Antoine modified the force gradient with a variation of the logic in 1. and after some tweaking that gave a better feel. Although the effect is fairly subtle and there are still rare occasions when the problem of the end effector getting stuck occurs, the effect is now otherwise smooth. 
 
-This is how the final implementation at the end of this iteration looks like:
+This is what the final implementation at the end of this iteration looks like:
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration2/final.mp4" type="video/mp4">
