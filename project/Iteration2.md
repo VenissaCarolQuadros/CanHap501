@@ -120,9 +120,7 @@ During our meeting with the mentors and TAs, the lack of visual feedback coordin
 
 Besides making the buttons appear to span the whole length of the screen (which hadn't been done yet, as can be observed in the video in the previous section) to make this affordance clearer, I also worked on changing the icons of the buttons since this didn't seem to be as obvious as expected. Also, since the way to trigger a button in our application (which is by touching or hovering over the button) isn't quite conventional, and the lack of haptics involved when the trigger happens, it made it necessary to use visual reinforcement to convey this. One more point that was brought up was to achieve coordination between the visual and haptic modalities since the gradient force was already present.
 
-To address the latter two concerns the button visual feedback was modified to appear like it was a button being pushed into the wall, which made it give the illusion of an actual push button. This was done by modifying the position of the button to move when the end effector was in contact with it. 
-
-When I was done, while I'd changed the button icons to be more clear, the design was still pretty bland. Antoine worked on the button images to give a polished, cool look to the buttons!
+To address the latter two concerns the button visual feedback was modified to appear like it was a button being pushed into the wall, which made it give the illusion of an actual push button. This was done by modifying the position of the button to move when the end effector was in contact with it. I also changed the button icons to be more clear. 
 
 <video height="100%" controls>
   <source src="../assets/images/project/iteration2/button_logic_new.mp4" type="video/mp4">
