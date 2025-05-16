@@ -6,6 +6,7 @@ There's not much in the way of a description here, but let's leave the touchy-fe
 - [Lab 3: Communicate Something](labs/Lab3.md)
 - [Lab 4: Controlled actuation using PID ](labs/Lab4.md)
 
-### Project Blogs
+### TremCasso Blogs
 - [Iteration 1](project/Iteration1.md)
 - [Iteration 2](project/Iteration2.md)
+- [Final Project Pro](project/TremCasso.pdf)
